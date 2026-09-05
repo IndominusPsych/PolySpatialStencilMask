@@ -1,0 +1,21 @@
+{
+    "name": "com.indominuspsych.polyspatialstencilmask",
+    "author": {
+    "name": "Vivek Hari",
+    "email": "vivekhari619hlr@gmail.com",
+    "url": "https://indominuspsych.github.io"
+    },
+    "version": "1.0.0",
+    "license": "MIT",
+    "displayName": "PolySpatial Stencil Mask",
+    "description": "Camera-projected polygon boundary masking on a reference plane, built with Shader Graph for URP (no stencil buffer, no custom HLSL).",
+    "unity": "6000.0",
+    "dependencies": {
+        "com.unity.render-pipelines.universal": "17.4.0",
+        "com.unity.shadergraph": "17.4.0",
+        "com.unity.ugui": "2.0.0",
+        "com.unity.inputsystem": "1.19.0",
+        "com.unity.xr.interaction.toolkit": "3.4.1",
+        "com.unity.xr.management": "4.5.4"
+    }
+}
