@@ -4,6 +4,22 @@ Camera-projected polygon boundary masking on a reference plane, built with Shade
 
 ![Demo](Documentation~/Images/demo.gif)
 
+## How it works
+
+`StencilMask` (an invisible reference plane) and `StencilObject` (the surface you actually see) are two separate objects. A camera-ray trick is what lets them live in different places and still mask correctly:
+
+![Diagram of the four-step boundary-mask mechanism: two separate objects, a camera ray that continues past the shaded fragment to cross the reference plane, a six-point polygon test in that plane's local space, and a final composite of the mask alpha with the independently-sampled texture color.](Documentation~/Images/mechanism-diagram.svg)
+
+**A · Setup** — the rendered surface and the reference plane are two separate objects, free to sit anywhere in the scene.
+
+**B · Ray cast** — the shader casts a ray from the camera through the fragment, `P`, and keeps going until it crosses `StencilMask`'s plane at `P′`.
+
+**C · Boundary test** — `P′` is transformed into `StencilMask`'s local space and checked against the six boundary points (here, the shipped `CutOut` shape).
+
+**D · Composite** — masking geometry (top) and texture content (bottom) are computed independently and only meet at the final multiply.
+
+Because `P′` always lands on `StencilMask`'s real position, the cutout stays **visually anchored there as the camera moves** — even though `StencilObject`, and whatever it's displaying, can sit anywhere else in the scene entirely.
+
 ## Installation
 
 **Package Manager (git URL)**

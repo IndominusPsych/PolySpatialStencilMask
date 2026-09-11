@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1092 700" font-family="'IBM Plex Sans', Arial, sans-serif">
+  <rect x="0" y="0" width="1092" height="700" fill="#ffffff"/>
+
+  <!-- Panel A -->
+  <g transform="translate(12,12)">
+    <rect x="-4" y="-4" width="348" height="290" rx="8" fill="none" stroke="#dbe1e8" stroke-width="1"/>
+    <text x="10" y="18" font-size="14" font-weight="700" fill="#1b2430">A</text>
+    <g transform="translate(0,26)">
+      <rect x="18" y="118" width="30" height="20" rx="3" fill="none" stroke="#1b2430" stroke-width="1.6"/>
+      <circle cx="55" cy="128" r="7" fill="none" stroke="#1b2430" stroke-width="1.6"/>
+      <text x="33" y="150" font-size="10" fill="#5b6675" text-anchor="middle">Camera</text>
+
+      <rect x="150" y="68" width="55" height="92" fill="#c6407d" fill-opacity="0.16" stroke="#c6407d" stroke-width="2"/>
+      <text x="177" y="176" font-size="11" font-weight="600" fill="#c6407d" text-anchor="middle">StencilObject</text>
+      <text x="177" y="189" font-size="9" fill="#5b6675" text-anchor="middle">display surface</text>
+
+      <rect x="262" y="36" width="55" height="148" fill="none" stroke="#0e7c86" stroke-width="2" stroke-dasharray="5 4"/>
+      <line x1="292" y1="110" x2="250" y2="110" stroke="#0e7c86" stroke-width="1.6"/>
+      <polygon points="250,110 259,106 259,114" fill="#0e7c86"/>
+      <text x="290" y="200" font-size="11" font-weight="600" fill="#0e7c86" text-anchor="middle">StencilMask</text>
+      <text x="290" y="213" font-size="9" fill="#5b6675" text-anchor="middle">reference plane, never rendered</text>
+    </g>
+    <text x="172" y="270" font-size="12.5" font-weight="600" fill="#1b2430" text-anchor="middle">Two separate objects</text>
+  </g>
+
+  <!-- Panel B -->
+  <g transform="translate(376,12)">
+    <rect x="-4" y="-4" width="348" height="290" rx="8" fill="none" stroke="#dbe1e8" stroke-width="1"/>
+    <text x="10" y="18" font-size="14" font-weight="700" fill="#1b2430">B</text>
+    <g transform="translate(0,26)">
+      <rect x="18" y="118" width="30" height="20" rx="3" fill="none" stroke="#1b2430" stroke-width="1.6"/>
+      <circle cx="55" cy="128" r="7" fill="none" stroke="#1b2430" stroke-width="1.6"/>
+
+      <rect x="150" y="68" width="55" height="92" fill="#c6407d" fill-opacity="0.1" stroke="#c6407d" stroke-width="1.6"/>
+      <rect x="262" y="36" width="55" height="148" fill="none" stroke="#0e7c86" stroke-width="1.6" stroke-dasharray="5 4"/>
+
+      <line x1="55" y1="128" x2="178" y2="98" stroke="#d9640a" stroke-width="2"/>
+      <line x1="178" y1="98" x2="292" y2="70" stroke="#d9640a" stroke-width="2" stroke-dasharray="4 4"/>
+      <polygon points="292,70 280,68 283,78" fill="#d9640a"/>
+
+      <circle cx="178" cy="98" r="4.5" fill="#d9640a"/>
+      <text x="178" y="88" font-size="12" font-weight="700" fill="#d9640a" text-anchor="middle">P</text>
+
+      <circle cx="292" cy="70" r="5.5" fill="none" stroke="#0e7c86" stroke-width="2"/>
+      <text x="292" y="58" font-size="12" font-weight="700" fill="#0e7c86" text-anchor="middle">P′</text>
+
+      <text x="177" y="176" font-size="9.5" fill="#5b6675" text-anchor="middle">fragment being shaded</text>
+      <text x="285" y="196" font-size="9.5" fill="#5b6675" text-anchor="middle">tested here, not at P</text>
+    </g>
+    <text x="172" y="270" font-size="12.5" font-weight="600" fill="#1b2430" text-anchor="middle">Ray continues past the fragment</text>
+  </g>
+
+  <!-- Panel C -->
+  <g transform="translate(740,12)">
+    <rect x="-4" y="-4" width="348" height="290" rx="8" fill="none" stroke="#dbe1e8" stroke-width="1"/>
+    <text x="10" y="18" font-size="14" font-weight="700" fill="#1b2430">C</text>
+    <g transform="translate(0,26)">
+      <line x1="88" y1="112" x2="258" y2="112" stroke="#5b6675" stroke-width="1"/>
+      <polygon points="258,112 250,108 250,116" fill="#5b6675"/>
+      <text x="262" y="116" font-size="9" fill="#5b6675">right</text>
+
+      <line x1="170" y1="192" x2="170" y2="36" stroke="#5b6675" stroke-width="1"/>
+      <polygon points="170,36 166,44 174,44" fill="#5b6675"/>
+      <text x="176" y="38" font-size="9" fill="#5b6675">forward</text>
+
+      <polygon points="110,172 170,172 230,172 230,52 170,52 110,52" fill="#0e7c86" fill-opacity="0.16" stroke="#0e7c86" stroke-width="2"/>
+
+      <circle cx="190" cy="122" r="5" fill="#d9640a"/>
+      <text x="190" y="141" font-size="10" font-weight="700" fill="#d9640a" text-anchor="middle">P′</text>
+      <text x="190" y="153" font-size="9.5" fill="#2e8b57" text-anchor="middle">inside → kept</text>
+
+      <circle cx="253" cy="66" r="5" fill="none" stroke="#5b6675" stroke-width="1.6"/>
+      <text x="253" y="199" font-size="9.5" fill="#5b6675" text-anchor="middle">outside → discarded</text>
+      <line x1="253" y1="71" x2="253" y2="190" stroke="#5b6675" stroke-width="1" stroke-dasharray="2 3"/>
+    </g>
+    <text x="172" y="270" font-size="12.5" font-weight="600" fill="#1b2430" text-anchor="middle">Tested against six boundary points</text>
+  </g>
+
+  <!-- Panel D -->
+  <g transform="translate(12,322)">
+    <rect x="-2" y="-2" width="1068" height="356" rx="8" fill="none" stroke="#dbe1e8" stroke-width="1"/>
+    <text x="10" y="20" font-size="14" font-weight="700" fill="#1b2430">D</text>
+
+    <g transform="translate(24,36) scale(1.44)">
+      <rect x="20" y="26" width="230" height="50" rx="4" fill="none" stroke="#0e7c86" stroke-width="1.6"/>
+      <text x="135" y="47" font-size="11" fill="#0e7c86" text-anchor="middle">camera ray → StencilMask</text>
+      <text x="135" y="63" font-size="11" fill="#0e7c86" text-anchor="middle">plane → polygon test</text>
+      <line x1="250" y1="51" x2="296" y2="51" stroke="#0e7c86" stroke-width="1.8"/>
+      <polygon points="296,51 288,47 288,55" fill="#0e7c86"/>
+      <rect x="300" y="29" width="92" height="44" rx="4" fill="#0e7c86" fill-opacity="0.16" stroke="#0e7c86" stroke-width="1.8"/>
+      <text x="346" y="56" font-size="14" font-weight="700" fill="#0e7c86" text-anchor="middle">Alpha</text>
+
+      <rect x="20" y="136" width="230" height="50" rx="4" fill="none" stroke="#c6407d" stroke-width="1.6"/>
+      <text x="135" y="157" font-size="11" fill="#c6407d" text-anchor="middle">StencilObject's own UV0</text>
+      <text x="135" y="173" font-size="11" fill="#c6407d" text-anchor="middle">→ sample MainTex × Color</text>
+      <line x1="250" y1="161" x2="296" y2="161" stroke="#c6407d" stroke-width="1.8"/>
+      <polygon points="296,161 288,157 288,165" fill="#c6407d"/>
+      <rect x="300" y="139" width="108" height="44" rx="4" fill="#c6407d" fill-opacity="0.16" stroke="#c6407d" stroke-width="1.8"/>
+      <text x="354" y="166" font-size="14" font-weight="700" fill="#c6407d" text-anchor="middle">BaseColor</text>
+
+      <line x1="392" y1="51" x2="468" y2="92" stroke="#5b6675" stroke-width="1.4"/>
+      <line x1="408" y1="161" x2="468" y2="108" stroke="#5b6675" stroke-width="1.4"/>
+      <circle cx="486" cy="100" r="22" fill="#ffffff" stroke="#1b2430" stroke-width="1.8"/>
+      <text x="486" y="106" font-size="16" fill="#1b2430" text-anchor="middle">×</text>
+
+      <line x1="508" y1="100" x2="548" y2="100" stroke="#1b2430" stroke-width="1.8"/>
+      <polygon points="548,100 539,95 539,105" fill="#1b2430"/>
+      <rect x="552" y="75" width="150" height="50" rx="4" fill="#1b2430" stroke="#1b2430" stroke-width="1.8"/>
+      <text x="627" y="105" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Final Pixel</text>
+    </g>
+
+    <text x="534" y="335" font-size="12.5" font-weight="600" fill="#1b2430" text-anchor="middle">Two independent paths, one multiply</text>
+  </g>
+</svg>
